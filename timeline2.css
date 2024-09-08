@@ -1,0 +1,151 @@
+@font-face {
+    font-family: yone;
+    src: url(./src/YesevaOne-Regular.ttf);
+}
+
+@keyframes opacity-change {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+html {background-color: black}
+
+.pad {
+    height: 100px;
+    background-color: black;
+}
+
+#header {
+    position: fixed;
+    z-index: 100;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: opacity-change linear;
+    animation-timeline: scroll();
+    animation-range-start: 0;
+    animation-range-end: 160px;
+}
+
+.short-text { display: none; }
+@media (max-width: 810px) {
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+}
+
+#teamName {
+    font-size: 50px;
+    color: white;
+    display: inline-block;
+    line-height: 100px;
+    font-family: "yone";
+    position: relative;
+    top: -50%;
+    @media only screen and (max-width: 810px)  {
+        font-size:40px;
+        line-height: 1.2em;
+        top: -30%
+    };
+}
+
+#iconWrapper {
+    display: inline-block;
+    width: 150px;
+    top: 20%;
+    position: relative;
+    text-align:center;
+}
+#icon {
+    height: 150px;
+    width: 150px;
+}
+
+.wrapper {
+    height: 600px;
+    display: flex;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    margin: 20px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline-item.right {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item.left::before {
+    left: auto;
+    right: -20px;
+    background-color:white;
+}
+
+.timeline-item.right::before {
+    left: -20px;
+    background-color: white;
+}
+
+.timeline-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h2 {
+    margin-top: 0;
+}
+
+.timeline-content p {
+    margin: 0;
+}

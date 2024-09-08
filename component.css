@@ -1,0 +1,209 @@
+@font-face {
+    font-family: yone;
+    src: url(./src/YesevaOne-Regular.ttf);
+}
+
+@keyframes opacity-change {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+html {background-color: black}
+
+#pad {
+    height: 150px;
+}
+
+#header {
+    position: fixed;
+    z-index: 100;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: opacity-change linear;
+    animation-timeline: scroll();
+    animation-range-start: 0;
+    animation-range-end: 160px;
+}
+
+
+.short-text { display: none; }
+@media (max-width: 810px) {
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+}
+
+.note1 {
+    color: white;
+    font-family: 'yone';
+    text-align: center;
+    font-size: 28px;
+    @media (max-width: 810px) {
+        font-size: 18px;
+    }
+}
+
+.note2 {
+    color: white;
+    font-family: 'yone';
+    text-align: center;
+    font-size: 20px;
+    @media (max-width: 810px) {
+        font-size: 12px;
+    }
+}
+
+#teamName {
+    font-size: 50px;
+    color: white;
+    display: inline-block;
+    line-height: 100px;
+    font-family: "yone";
+    position: relative;
+    top: -50%;
+    @media only screen and (max-width: 810px)  {
+        font-size:40px;
+        line-height: 1.2em;
+        top: -30%
+    };
+}
+#mars {
+    font-family: "yone";
+}
+
+#iconWrapper {
+    display: inline-block;
+    width: 150px;
+    top: 20%;
+    position: relative;
+    text-align:center;
+}
+#icon {
+    height: 150px;
+
+}
+
+.padding {
+    height: 150px;
+    @media (max-width: 810px) {
+        height: 80px;
+    }
+}
+
+.container {
+    width: 92%;
+    height: 1200px;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    background-color:#f0d3ffd3;
+    flex: 1;
+    width: 100%;
+    border: 1px dotted black;
+    transition: 0.7s;
+    font-family: 'yone';
+}
+
+.inner_block {
+    position: relative;
+    top: 40%;
+    left: 5%;
+    font-size: 32px;
+    transition: 1s;
+    margin-right: 10px;
+    opacity: 1;
+    @media (max-width: 810px) {
+        font-size: 20px;
+    }
+}
+
+.linking {
+    color: black;
+    text-decoration: none;
+}
+
+
+.desc {
+    position: relative;
+    top: 10%;
+    left: 30%;
+    font-size: 20px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    @media (max-width: 810px) {
+        font-size: 15px;
+    }
+
+}
+
+.box:hover {
+    flex:40%;  
+    background: rgb(228, 204, 228);
+}
+
+.box:hover > .inner_block {
+    top:80%;
+    font-size: 42px;
+    @media (max-width: 810px) {
+        font-size: 28px;
+    }
+}
+
+.box:hover > .desc {
+    opacity: 1;
+    top: 10%;
+    left: 5%;
+}
+
+#Nose {
+    background-image: url(src/noseV2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+#Nose:hover {
+    opacity: 0.9;
+}
+
+#Nozzle {
+    background-image: url(src/nozzleV2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+#Nozzle:hover {
+    opacity: 0.9;
+}
+
+#Chamber {
+    background-image: url(src/chamber.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+#Chamber:hover {
+    opacity: 0.9;
+}
+
+#Propellent {
+    background-image: url(src/propellentV2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+#Propellent:hover {
+    opacity: 0.9;
+}
