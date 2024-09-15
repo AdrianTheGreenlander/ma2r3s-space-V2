@@ -1,0 +1,224 @@
+@font-face {
+    font-family: odisean;
+    src: url(./src/OdiseanTech-qZG40.ttf);
+}
+
+@font-face {
+    font-family: yone;
+    src: url(./src/YesevaOne-Regular.ttf);
+}
+
+@keyframes opacity-change {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+html {background-color: black}
+
+#pad {
+    height: 100px;
+}
+
+#header {
+    position: fixed;
+    z-index: 100;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: opacity-change linear;
+    animation-timeline: scroll();
+    animation-range-start: 0;
+    animation-range-end: 160px;
+}
+
+.short-text { display: none; }
+@media (max-width: 810px) {
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+}
+
+#teamName {
+    font-size: 50px;
+    color: white;
+    display: inline-block;
+    line-height: 100px;
+    font-family: "yone";
+    position: relative;
+    top: -50%;
+    @media only screen and (max-width: 810px)  {
+        font-size:40px;
+        line-height: 1.2em;
+        top: -30%
+    };
+}
+
+#iconWrapper {
+    display: inline-block;
+    width: 150px;
+    top: 20%;
+    position: relative;
+    text-align:center;
+}
+#icon {
+    height: 150px;
+    width: 150px;
+}
+
+.wrapper {
+    height: 600px;
+    display: flex;
+}
+
+
+.background1 {
+    background-image: url(./src/cover1.png);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 600px;
+    min-height: 600px;
+}
+
+.background2 {
+    background-image: url(./src/cover2.jpg);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 600px;
+    min-height: 600px;
+}
+
+.background3 {
+    background-image: url(./src/cover3.jpg);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 600px;
+    min-height: 600px;
+}
+.descrp {
+    z-index: 10;
+    position: relative;
+    color: white;
+    display: block;
+    font-family: "yone";
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.text {
+    z-index: 10;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    padding: 1em 2em 1em 2em;
+    border: 2px solid white;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "odisean";
+    font-size:25px;
+}
+
+.inner_block {
+    position: relative;
+    top: 70%;
+    left: 10%;
+    max-width: 80vw;
+}
+
+
+
+
+a {
+    position: relative; 
+    display: block;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    border-radius: 8px;
+    transition: .5s;
+    border: 2px solid rgb(186, 186, 186);
+  }
+  
+a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ca60ffd3;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+a:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #ca60ffd3;
+}
+  
+ a:hover {
+    color: #ca60ffd3;
+    box-shadow: 0 0 20px #ca60ffd3;
+    text-shadow: 0 0 20px #ca60ffd3;
+
+}
+
+
+.buttonContent {
+    z-index: 10;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    display: inline-block;
+    font-family: "odisean";
+    font-size:23px;
+}
+
+#timeline {
+    position: relative; 
+    display: block;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.footer {
+    height:100px;
+    display: block;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.ackn{
+    font-family: "yone";
+    line-height: 1.5em;
+}
