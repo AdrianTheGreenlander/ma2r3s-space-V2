@@ -73,7 +73,7 @@ html {background-color: black}
 
 
 .background1 {
-    background-image: url(./src/cover1.png);
+    background-image: url(cover1.png);
     display: block;
     position: absolute;
     width: 100%;
