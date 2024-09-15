@@ -1,11 +1,11 @@
 @font-face {
     font-family: odisean;
-    src: url(./src/OdiseanTech-qZG40.ttf);
+    src: url(OdiseanTech-qZG40.ttf);
 }
 
 @font-face {
     font-family: yone;
-    src: url(./src/YesevaOne-Regular.ttf);
+    src: url(YesevaOne-Regular.ttf);
 }
 
 @keyframes opacity-change {
@@ -73,7 +73,7 @@ html {background-color: black}
 
 
 .background1 {
-    background-image: url(./src/cover1.png);
+    background-image: url(cover1.png);
     display: block;
     position: absolute;
     width: 100%;
@@ -89,7 +89,7 @@ html {background-color: black}
 }
 
 .background2 {
-    background-image: url(./src/cover2.jpg);
+    background-image: url(cover2.jpg);
     display: block;
     position: absolute;
     width: 100%;
@@ -105,7 +105,7 @@ html {background-color: black}
 }
 
 .background3 {
-    background-image: url(./src/cover3.jpg);
+    background-image: url(cover3.jpg);
     display: block;
     position: absolute;
     width: 100%;
